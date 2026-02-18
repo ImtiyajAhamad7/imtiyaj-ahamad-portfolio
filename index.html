@@ -144,10 +144,8 @@
 </head>
 <body>
   <div class="wrap" role="main" aria-labelledby="who">
-    <!-- SIDEBAR -->
     <aside class="card" aria-label="Profile">
       <div class="avatar" role="img" aria-label="Profile photo of Imtiyaj Ahamad">
-        <!-- Replace the src with your photo path -->
         <img src="./public/upa.jpeg" alt="Profile picture">
       </div>
 
@@ -190,16 +188,15 @@
 
       <div style="margin-top:14px">
         <a class="btn" href="#projects" title="View projects">View Projects</a>
-        <a class="btn ghost" href="Resume (2).pdf" style="margin-left:8px" download>Download Resume</a>
+        <a class="btn ghost" href="https://drive.google.com/file/d/1BHm0JLc2Kh2eDUzeQLJDnnh6lj94EYwq/view?usp=sharing" style="margin-left:8px" target="_blank" rel="noopener">Download Resume</a>
       </div>
 
       <footer class="small" style="margin-top:14px">
         Built with pragmatic UX & clean code. <br>
-        Based on resume data. :contentReference[oaicite:1]{index=1}
+        Based on resume data.
       </footer>
     </aside>
 
-    <!-- MAIN -->
     <main class="main card" aria-labelledby="headline">
       <div>
         <div class="headline">
@@ -285,7 +282,7 @@
         </p>
 
         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-          <a class="btn" href="Resume (2).pdf" download>Download Resume (PDF)</a>
+          <a class="btn" href="https://drive.google.com/file/d/1BHm0JLc2Kh2eDUzeQLJDnnh6lj94EYwq/view?usp=sharing" target="_blank" rel="noopener">Download Resume (PDF)</a>
           <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">View GitHub</a>
         </div>
 
@@ -297,10 +294,8 @@
   </div>
 
   <script>
-    // small interactive bits
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // theme toggle: increases contrast for better visibility (simple example)
     const btn = document.getElementById('themeToggle');
     let highContrast = false;
     btn.addEventListener('click', () => {
@@ -317,20 +312,6 @@
         document.documentElement.style.removeProperty('--muted');
       }
     });
-
-    // Download starter html (client-side)
-    function downloadSample(){
-      const files = {
-        "index.html": document.documentElement.outerHTML
-      };
-      const blob = new Blob([files["index.html"]], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'imtiyaj_personal_branding.html';
-      a.click();
-      setTimeout(()=> URL.revokeObjectURL("https://drive.google.com/file/d/1BHm0JLc2Kh2eDUzeQLJDnnh6lj94EYwq/view?usp=sharing"), 2000);
-    }
   </script>
 </body>
 </html>
